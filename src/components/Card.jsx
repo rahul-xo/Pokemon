@@ -1,12 +1,12 @@
 import React from "react";
 
-const Card = () => {
+const Card = ({pokemon}) => {
   return (
-    <div className="max-w-xs w-full bg-gray-800 rounded-2xl shadow-lg overflow-hidden">
+    <div className="max-w-xs w-full backdrop-blur-lg rounded-2xl shadow-lg overflow-hidden border border-gray-600">
       {/* Image Section */}
       <img
-        className="w-full h-48 object-cover"
-        src="https://placehold.co/600x400/1a202c/ffffff?text=Your+Image"
+        className="w-full h-48 object-contain"
+        src={`${pokemon.sprites.other.dream_world.front_default}`}
         alt="Card"
       />
 

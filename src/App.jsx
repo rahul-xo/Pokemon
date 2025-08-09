@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 import CardBox from "./components/CardBox";
 
 function App() {
+  const [Search,setSearch]=useState("");
   // Background image URL
   const backgroundImageUrl =
     "https://assets.pokemon.com//assets/cms2/img/misc/virtual-backgrounds/tcg/sun-moon-cosmic-eclipse-01.jpg";
@@ -41,10 +42,12 @@ function App() {
               type="text"
               placeholder="Search for a Pokemon ..."
               className="w-full p-4 pl-12 text-lg text-white bg-gray-900 bg-opacity-70 border border-gray-600 rounded-full focus:outline-none focus:ring-2 focus:ring-blue-500 placeholder-gray-400"
+              value={Search}
+              onChange={(e)=>setSearch(e.target.value)}
             />
           </div>
         </div>
-        <CardBox />
+        <CardBox Search={Search}/>
       </div>
     </div>
   );

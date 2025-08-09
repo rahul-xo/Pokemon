@@ -15,26 +15,26 @@ const Card = ({pokemon}) => {
         <div className="grid grid-cols-2 gap-4 text-center">
           {/* Text Pair 1 */}
           <div>
-            <p className="font-bold text-lg text-gray-200">2,500</p>
-            <p className="text-sm text-gray-400">Followers</p>
+            <p className="font-bold text-lg text-gray-200">{pokemon.name}</p>
+            <p className="text-sm text-gray-400 font-bold">Name</p>
           </div>
 
           {/* Text Pair 2 */}
           <div>
-            <p className="font-bold text-lg text-gray-200">500</p>
-            <p className="text-sm text-gray-400">Following</p>
+            <p className="font-bold text-lg text-gray-200">{pokemon.height}</p>
+            <p className="text-sm text-gray-400 font-bold">Height</p>
           </div>
 
           {/* Text Pair 3 */}
           <div>
-            <p className="font-bold text-lg text-gray-200">120</p>
-            <p className="text-sm text-gray-400">Posts</p>
+            <p className="font-bold text-lg text-gray-200">{pokemon.weight}</p>
+            <p className="text-sm text-gray-400 font-bold">Weight</p>
           </div>
 
           {/* Text Pair 4 */}
           <div>
-            <p className="font-bold text-lg text-gray-200">8</p>
-            <p className="text-sm text-gray-400">Years</p>
+            <p className="font-bold text-lg text-gray-200">{pokemon.stats[5].base_stat}</p>
+            <p className="text-sm text-gray-400 font-bold">Speed</p>
           </div>
         </div>
       </div>
